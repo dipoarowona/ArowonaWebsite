@@ -1,6 +1,11 @@
 #privacy
 config.py
 
+#extra
+.DS_Store
+.project
+*.pyc
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
