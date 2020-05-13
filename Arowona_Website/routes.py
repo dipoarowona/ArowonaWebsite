@@ -7,14 +7,17 @@ from flask_mail import Message
 
 @app.route("/home")
 @app.route("/")
+@app.route("/home/")
 def home():
     return render_template("home.html")
 
 @app.route("/about")
+@app.route("/about/")
 def about():
     return render_template("about.html", title="About")
 
 @app.route('/contact', methods=["GET","POST"])
+@app.route('/contact/', methods=["GET","POST"])
 def contact():
     form = ContactForm()
     if form.validate_on_submit():
@@ -29,10 +32,24 @@ def contact():
     return render_template( "contact.html", title="Contact", form=form)
 
 @app.route("/projects")
+@app.route("/projects/")
 def projects():
     
     
     return render_template( "projects.html", title="Projects")
+
+
+@app.errorhandler(404)
+def error_404(e):
+    return render_template("404.html"), 404
+
+@app.errorhandler(403)
+def error_403(e):
+    return render_template("403.html"), 403
+@app.errorhandler(500)
+def error_500(e):
+    return render_template("500.html"), 500
+
 
 
 
@@ -69,4 +86,6 @@ MESSAGE:
     
     mail.send(msg)
     mail.send(msg_user)
+    
+    
     
