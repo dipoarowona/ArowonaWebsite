@@ -28,7 +28,6 @@ def contact():
         message = form.message.data
         send_message(fname,lname,email,phone_number,message)
         flash("Your Message Has Been Sent!", "success")
-        return redirect('contact')
     return render_template( "contact.html", title="Contact", form=form)
 
 @app.route("/projects")
