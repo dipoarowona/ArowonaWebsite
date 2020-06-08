@@ -1,1 +1,18 @@
-{% extends "layout.html" %}{% block content %}        <div class="padding" style="background-size: cover; height: 100%; width: 100%; position: relative; display: table;">             <legend class="border-bottom mb-12 text-center" style="font-size:300%; color: #bf7528e0;">ABOUT</legend>            <div class="container">                <div class="row">                    <div class="col-sm-4">                        <img src="{{ url_for('static', filename='about_profile.jpg') }}" style="margin-left:-15px;">                    </div>                    <div class="col-sm-8">                        <p class="lead">Abdulsalam (Dipo) Arowona is an 18-year-old McMaster University Civil Engineering student, based in Hamilton, Ontario. Abdulsalam has a burning passion for software development, structural engineering, and investing via the stock market. He is self-taught in most areas of software development and in all areas of investing, which are illustrated in his projects along with roughly 4 years of investing experience. For all further inquiries contact Abdulsalam via the form in Contact or links listed below.</p>                </div>                </div>            </div>        </div>           {% endblock content %}
+{% extends "layout.html" %}
+{% block content %}
+
+        <div class="padding" style="background-size: cover; height: 100%; width: 100%; position: relative; display: table;">
+             <legend class="border-bottom mb-12 text-center" style="font-size:300%; color: #bf7528e0;">ABOUT</legend>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <img src="{{ url_for('static', filename='about_profile.jpg') }}" style="margin-left:-15px;">
+                    </div>
+                    <div class="col-sm-8">
+                        <p class="lead">Abdulsalam (Dipo) Arowona is an 18-year-old McMaster University Civil Engineering student, based in Hamilton, Ontario. Abdulsalam has a burning passion for software development, structural engineering, and investing via the stock market. He is self-taught in most areas of software development and in all areas of investing, which are illustrated in his projects along with roughly 4 years of investing and trading experience. For all further inquiries contact Abdulsalam via the form in Contact or icons listed below.</p>
+                </div>
+                </div>
+            </div>
+        </div>
+           
+{% endblock content %}
